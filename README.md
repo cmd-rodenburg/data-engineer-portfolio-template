@@ -9,7 +9,7 @@ This repository hosts a portfolio template specifically designed for data engine
 - **Customizable**: Easily adapt the structure and content to fit your personal or professional brand.
 
 ## 3. Technologies Used
-- **Frontend Framework**: Vue 3 with `Vite` syntax
+- **Frontend Framework**: Vue 3 with `<script setup>` syntax
 - **Programming Language**: TypeScript
 - **Styling**: TailwindCSS
 
