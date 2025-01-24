@@ -1,6 +1,6 @@
 <script setup lang="ts">
 const technologies = [
-  'Python', 'SQL', 'Apache Spark', 'Airflow', 'AWS', 'Snowflake', 'dbt', 'Kafka'
+  'Python', 'SQL', 'Airflow', 'Databricks', 'Snowflake', 'dbt', 'Power BI'
 ]
 </script>
 
@@ -9,8 +9,8 @@ const technologies = [
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32">
       <div class="text-center">
         <h1 class="text-4xl sm:text-6xl font-bold text-gray-900 dark:text-white mb-6">
-          Data Engineering
-          <span class="text-primary-600">Excellence</span>
+          Rodenburg 
+          <span class="text-primary-600">Business Intelligence</span>
         </h1>
         <p class="text-xl text-gray-600 dark:text-gray-300 mb-8 max-w-2xl mx-auto">
           Transforming raw data into actionable insights through robust data pipelines
