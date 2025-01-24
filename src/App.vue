@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import TheNavbar from './components/TheNavbar.vue'
+import TheNavbar from './components/_NavigationBar.vue'
 import HeroSection from './components/HeroSection.vue'
 import AboutSection from './components/AboutSection.vue'
 import SkillsSection from './components/SkillsSection.vue'

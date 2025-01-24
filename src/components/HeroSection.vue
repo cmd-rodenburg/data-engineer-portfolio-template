@@ -10,7 +10,7 @@ const technologies = [
       <div class="text-center">
         <h1 class="text-4xl sm:text-6xl font-bold text-gray-900 dark:text-white mb-6">
           Rodenburg 
-          <span class="text-primary-600">Business Intelligence</span>
+          <span class="text-moss-500">Business Intelligence</span>
         </h1>
         <p class="text-xl text-gray-600 dark:text-gray-300 mb-8 max-w-2xl mx-auto">
           Transforming raw data into actionable insights through robust data pipelines

@@ -29,7 +29,7 @@ watch(y, (value) => {
             <a href="#about" class="text-moss-300 hover:text-moss-200 transition-colors">About</a>
             <a href="#skills" class="text-moss-300 hover:text-moss-200 transition-colors">Skills</a>
             <a href="#projects" class="text-moss-300 hover:text-moss-200 transition-colors">Projects</a>
-            <a href="#experience" class="text-moss-300 hover:text-moss-200 transition-colors">Experience</a>
+            <!-- <a href="#experience" class="text-moss-300 hover:text-moss-200 transition-colors">Experience</a> -->
             <a href="#contact" class="text-moss-300 hover:text-moss-200 transition-colors">Contact</a>
           </div>
 
