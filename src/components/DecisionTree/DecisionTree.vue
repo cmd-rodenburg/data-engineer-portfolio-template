@@ -73,18 +73,17 @@ const handleOptionClick = (nextNode: TreeKeys) => {
 
 <template>
   <div class="max-w-xl mx-auto p-4 bg-gray-800 shadow rounded-lg">
-    <header class="mb-4">
-    </header>
+    <header class="mb-2"></header>
     <div v-if="tree[currentNode.key as TreeKeys]?.question">
       <h2 class="text-xl font-semibold">
         {{ tree[currentNode.key as TreeKeys]?.question }}
       </h2>
-      <div class="mt-4">
+      <div class="space-x-4 space-y-4">
         <button
           v-for="option in tree[currentNode.key as TreeKeys]?.options"
           :key="option.text"
           @click="handleOptionClick(option.next as TreeKeys)"
-          class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600"
+          class="bg-moss-800 text-white px-4 py-2 rounded hover:bg-moss-600"
         >
           {{ option.text }}
         </button>
