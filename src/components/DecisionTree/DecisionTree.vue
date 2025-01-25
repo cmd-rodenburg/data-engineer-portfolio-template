@@ -1,5 +1,5 @@
-<script setup lang="ts">
-import { reactive } from 'vue';
+<!-- <script setup lang="ts">
+import { reactive, computed } from 'vue';
 
 const tree = {
   start: {
@@ -66,32 +66,43 @@ const resetTree = () => {
   currentNode.key = 'start' as TreeKeys;
 };
 
-const handleOptionClick = (nextNode: TreeKeys) => {
-  currentNode.key = nextNode as TreeKeys;
-};
+// Computed properties to handle node types
+const currentNodeData = computed(() => tree[currentNode.key as TreeKeys]);
+
+const hasOptions = computed(() => {
+  const node = currentNodeData.value;
+  return node && 'options' in node;
+});
+
+const isResultNode = computed(() => {
+  const node = currentNodeData.value;
+  return node && 'result' in node;
+});
 </script>
 
 <template>
   <div class="max-w-xl mx-auto p-4 bg-gray-800 shadow rounded-lg">
     <header class="mb-2"></header>
-    <div v-if="tree[currentNode.key as TreeKeys]?.question">
+    
+    <div v-if="hasOptions">
       <h2 class="text-xl font-semibold">
-        {{ tree[currentNode.key as TreeKeys]?.question }}
+        {{ currentNodeData.value.question }}
       </h2>
-      <div class="space-x-4 space-y-4">
+      <div class="space-y-4">
         <button
-          v-for="option in tree[currentNode.key as TreeKeys]?.options"
+          v-for="option in currentNodeData.value.options"
           :key="option.text"
-          @click="handleOptionClick(option.next as TreeKeys)"
           class="bg-moss-800 text-white px-4 py-2 rounded hover:bg-moss-600"
+          @click="() => (currentNode.key = option.next as TreeKeys)"
         >
           {{ option.text }}
         </button>
       </div>
     </div>
-    <div v-else-if="tree[currentNode.key as TreeKeys]?.result">
+
+    <div v-else-if="isResultNode">
       <h2 class="text-xl font-semibold">Result</h2>
-      <p class="mt-4">{{ tree[currentNode.key as TreeKeys]?.result }}</p>
+      <p class="mt-4">{{ currentNodeData.value.result }}</p>
       <button
         @click="resetTree"
         class="mt-4 bg-gray-500 text-white px-4 py-2 rounded hover:bg-gray-600"
@@ -99,9 +110,9 @@ const handleOptionClick = (nextNode: TreeKeys) => {
         Start Over
       </button>
     </div>
-  </div>
-</template>
 
-<style scoped>
-/* Add custom styling as needed */
-</style>
+    <div v-else>
+      <p>No question or result available</p>
+    </div>
+  </div>
+</template> -->
