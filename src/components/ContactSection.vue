@@ -65,10 +65,39 @@
             Send Message
           </button>
         </form>
+        <div class="contact-links">
+          <h3>Connect with me</h3>
+          <div class="flex justify-center space-x-4">
+            <a href="https://www.linkedin.com/in/annerodenburgbi" target="_blank">
+              <img src="https://img.icons8.com/color/48/000000/linkedin.png" alt="LinkedIn" />
+            </a>
+            <a href="https://medium.com/@rodenburg.bi" target="_blank">
+              <img src="https://img.icons8.com/color/48/000000/medium.png" alt="Medium" />
+            </a>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 </template>
+
+<style scoped>
+.contact-links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+.contact-links a {
+  margin: 5px 0;
+  text-decoration: none;
+  color: #0073e6;
+  font-weight: bold;
+}
+.contact-links a:hover {
+  text-decoration: underline;
+}
+</style>
 
 <script setup lang="ts">
 import { ref } from 'vue'
