@@ -10,6 +10,7 @@
           name="contact"
           method="POST"
           @submit="handleSubmit"
+          netlify
         >
           <input type="hidden" name="form-name" value="contact" />
 
