@@ -32,7 +32,7 @@
           <div class="flex flex-col items-center">
             <div class="w-full max-w-[250px] mb-8">
               <img
-                src="../assets/profile.jpg"
+                src="./public/images/profile.jpg"
                 alt="Profile picture"
                 class="rounded-full w-full aspect-square object-cover shadow-lg"
               />
