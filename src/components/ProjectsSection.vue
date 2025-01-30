@@ -18,7 +18,7 @@ const projects = [
       'Power BI',
       'API enhancement',
     ],
-    image: './public/images/Gen3_data_platform.png',
+    image: '../../public/images/Gen3_data_platform.png',
   },
   {
     title: 'Greenfield Data Warehouse',
@@ -38,7 +38,7 @@ const projects = [
       'Docker',
     ],
 
-    image: '/public/images/Gen2_data_platform.png',
+    image: '/../../public/images/Gen2_data_platform.png',
   },
 ];
 </script>
