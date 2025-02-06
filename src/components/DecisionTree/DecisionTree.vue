@@ -1,7 +1,19 @@
-<!-- <script setup lang="ts">
-import { reactive, computed } from 'vue';
+<script setup lang="ts">
+import { ref, computed } from 'vue';
 
-const tree = {
+// Define tree structure
+interface QuestionNode {
+  question: string;
+  options: { text: string; next: string }[];
+}
+
+interface ResultNode {
+  result: string;
+}
+
+type TreeNode = QuestionNode | ResultNode;
+
+const tree: Record<string, TreeNode> = {
   start: {
     question: 'What type of solution are you looking for?',
     options: [
@@ -31,88 +43,59 @@ const tree = {
       { text: 'No', next: 'custom_dashboard' },
     ],
   },
-  real_time: {
-    result:
-      'We recommend a real-time analytics platform like Snowflake or Databricks.',
-  },
-  batch: {
-    result:
-      'Batch processing solutions like Azure Data Factory could be a great fit!',
-  },
-  cloud_integration: {
-    result:
-      'Consider cloud integration tools like Azure Data Factory or Prefect.',
-  },
-  on_prem_integration: {
-    result: 'On-premise tools like Apache Airflow might suit your needs.',
-  },
-  self_service: {
-    result:
-      'Tools like Power BI or Tableau would be perfect for self-service dashboards.',
-  },
-  custom_dashboard: {
-    result:
-      'We can design a custom dashboard tailored to your specific requirements.',
-  },
+  real_time: { result: 'We recommend a real-time analytics platform like Snowflake or Databricks.' },
+  batch: { result: 'Batch processing solutions like Azure Data Factory could be a great fit!' },
+  cloud_integration: { result: 'Consider cloud integration tools like Azure Data Factory or Prefect.' },
+  on_prem_integration: { result: 'On-premise tools like Apache Airflow might suit your needs.' },
+  self_service: { result: 'Tools like Power BI or Tableau would be perfect for self-service dashboards.' },
+  custom_dashboard: { result: 'We can design a custom dashboard tailored to your specific requirements.' },
 };
 
-type TreeKeys = keyof typeof tree;
+// Reactive state
+const currentNodeKey = ref('start');
 
-const currentNode = reactive({
-  key: 'start' as TreeKeys,
-});
+// Computed current node
+const currentNode = computed(() => tree[currentNodeKey.value]);
 
+// Type guards
+const isQuestionNode = (node: TreeNode): node is QuestionNode => 'question' in node;
+const isResultNode = (node: TreeNode): node is ResultNode => 'result' in node;
+
+// Reset function
 const resetTree = () => {
-  currentNode.key = 'start' as TreeKeys;
+  currentNodeKey.value = 'start';
 };
-
-// Computed properties to handle node types
-const currentNodeData = computed(() => tree[currentNode.key as TreeKeys]);
-
-const hasOptions = computed(() => {
-  const node = currentNodeData.value;
-  return node && 'options' in node;
-});
-
-const isResultNode = computed(() => {
-  const node = currentNodeData.value;
-  return node && 'result' in node;
-});
 </script>
 
 <template>
-  <div class="max-w-xl mx-auto p-4 bg-gray-800 shadow rounded-lg">
-    <header class="mb-2"></header>
-    
-    <div v-if="hasOptions">
-      <h2 class="text-xl font-semibold">
-        {{ currentNodeData.value.question }}
-      </h2>
-      <div class="space-y-4">
+  <div class="max-w-xl mx-auto p-4 bg-gray-800 text-white shadow rounded-lg">
+    <div v-if="isQuestionNode(currentNode)">
+      <h2 class="text-xl font-semibold">{{ currentNode.question }}</h2>
+      <div class="mt-4 space-y-2">
         <button
-          v-for="option in currentNodeData.value.options"
+          v-for="option in currentNode.options"
           :key="option.text"
-          class="bg-moss-800 text-white px-4 py-2 rounded hover:bg-moss-600"
-          @click="() => (currentNode.key = option.next as TreeKeys)"
+          class="bg-green-700 px-4 py-2 rounded hover:bg-green-600"
+          @click="currentNodeKey = option.next"
         >
           {{ option.text }}
         </button>
       </div>
     </div>
 
-    <div v-else-if="isResultNode">
+    <div v-else-if="isResultNode(currentNode)">
       <h2 class="text-xl font-semibold">Result</h2>
-      <p class="mt-4">{{ currentNodeData.value.result }}</p>
+      <p class="mt-4">{{ currentNode.result }}</p>
       <button
         @click="resetTree"
-        class="mt-4 bg-gray-500 text-white px-4 py-2 rounded hover:bg-gray-600"
+        class="mt-4 bg-gray-500 px-4 py-2 rounded hover:bg-gray-600"
       >
         Start Over
       </button>
     </div>
 
     <div v-else>
-      <p>No question or result available</p>
+      <p>No question or result available.</p>
     </div>
   </div>
-</template> -->
+</template>

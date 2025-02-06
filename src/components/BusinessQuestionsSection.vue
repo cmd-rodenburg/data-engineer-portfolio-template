@@ -63,14 +63,14 @@ function selectSolution(solution: BusinessSolution) {
 </script>
 
 <template>
-  <section class="section-container" id="business-solutions">
-    <div class="section-content" moss-50>
+  <section class="section-container bg-gradient-to-br from-primary-50 to-white dark:from-gray-900 dark:to-gray-800" id="business-solutions">
+    <div class="section-content">
       <!-- Section Title -->
       <h2 class="section-title text-moss-700">Business Solutions</h2>
       
       <!-- Introduction text -->
       <div class="intro-text mb-8">
-        <p class="text-lg text-moss-700">
+        <p class="text-lg text-moss-50">
           In today's digital landscape, businesses struggle to connect marketing performance with sales outcomes. 
           To bridge this gap, I engineered data-driven solutions leveraging Adobe Analytics and HubSpot CRM. 
           These implementations optimized user journeys, enhanced conversion rates, and improved lead qualification. 
@@ -105,10 +105,10 @@ function selectSolution(solution: BusinessSolution) {
       </div>
 
       <!-- Selected Solution Content -->
-      <div v-if="selectedSolution" class="solution-content bg-white rounded-lg shadow-lg p-8 border border-gray-200">
+      <div v-if="selectedSolution" class="solution-content bg-white rounded-lg shadow-lg p-8 border border-gray-200 text-moss-700">
         <div class="mb-8">
-          <h3 class="text-2xl font-bold mb-4 text-blue-600">Problem Statement</h3>
-          <ul class="list-disc ml-6 space-y-2 text-gray-700">
+          <h3 class="text-2xl font-bold mb-4">Problem Statement</h3>
+          <ul class="list-disc ml-6 space-y-2">
             <li v-for="(item, index) in selectedSolution.problem" :key="index">
               {{ item }}
             </li>
@@ -116,8 +116,8 @@ function selectSolution(solution: BusinessSolution) {
         </div>
 
         <div class="mb-8">
-          <h3 class="text-2xl font-bold mb-4 text-blue-600">Solution</h3>
-          <ul class="list-disc ml-6 space-y-2 text-gray-700">
+          <h3 class="text-2xl font-bold mb-4">Solution</h3>
+          <ul class="list-disc ml-6 space-y-2">
             <li v-for="(item, index) in selectedSolution.solution" :key="index">
               {{ item }}
             </li>
@@ -125,8 +125,8 @@ function selectSolution(solution: BusinessSolution) {
         </div>
 
         <div class="mb-8">
-          <h3 class="text-2xl font-bold mb-4 text-blue-600">Technical Implementation</h3>
-          <ul class="list-disc ml-6 space-y-2 text-gray-700">
+          <h3 class="text-2xl font-bold mb-4">Technical Implementation</h3>
+          <ul class="list-disc ml-6 space-y-2">
             <li v-for="(item, index) in selectedSolution.tech_implementation" :key="index">
               {{ item }}
             </li>
@@ -134,8 +134,8 @@ function selectSolution(solution: BusinessSolution) {
         </div>
 
         <div class="mb-8">
-          <h3 class="text-2xl font-bold mb-4 text-blue-600">Business Impact</h3>
-          <ul class="list-disc ml-6 space-y-2 text-gray-700">
+          <h3 class="text-2xl font-bold mb-4 ">Business Impact</h3>
+          <ul class="list-disc ml-6 space-y-2">
             <li v-for="(item, index) in selectedSolution.business_impact" :key="index">
               {{ item }}
             </li>
