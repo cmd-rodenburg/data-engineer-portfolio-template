@@ -19,7 +19,7 @@ const props = defineProps({
 .header {
   position: relative;
   width: 100%;
-  height: 200px; /* Adjust height as needed */
+  height: 100px; /* Adjust height as needed */
   overflow: hidden;
 }
 
