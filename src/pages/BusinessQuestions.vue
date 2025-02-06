@@ -15,7 +15,7 @@ import NavigationBar from '../components/_NavigationBar.vue'
 <style scoped>
 .page-wrapper {
   min-height: 100vh;
-  background-color: rgb(17 24 39);
+  background-color: rgb(64, 215, 18);
 }
 
 .main-content {

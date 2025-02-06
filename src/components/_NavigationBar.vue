@@ -2,7 +2,9 @@
 import { ref, watch } from 'vue';
 import { useWindowScroll } from '@vueuse/core';
 import { Disclosure, DisclosureButton, DisclosurePanel } from '@headlessui/vue';
+import { useRouter } from 'vue-router';
 
+const router = useRouter();
 const { y } = useWindowScroll();
 const isScrolled = ref(false);
 const showMainMenu = ref(false);
@@ -24,6 +26,20 @@ const closeMainMenu = (event: MouseEvent) => {
   }
 };
 
+// Handle navigation and scrolling
+const navigateAndScroll = async (sectionId: string) => {
+  showMainMenu.value = false;
+  if (router.currentRoute.value.path !== '/') {
+    await router.push('/');
+  }
+  setTimeout(() => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  }, 100);
+};
+
 // Add click event listener to close menu when clicking outside
 if (typeof window !== 'undefined') {
   window.addEventListener('click', closeMainMenu);
@@ -43,7 +59,7 @@ if (typeof window !== 'undefined') {
       <Disclosure v-slot="{ open }">
         <div class="flex justify-between h-16">
           <div class="flex items-center">
-            <a href="#" class="text-xl font-bold text-moss-200">Rodenburg BI</a>
+            <router-link to="/" class="text-xl font-bold text-moss-200">Rodenburg BI</router-link>
           </div>
 
           <!-- Desktop menu -->
@@ -56,11 +72,10 @@ if (typeof window !== 'undefined') {
               </button>
               <div v-if="showMainMenu" class="absolute left-0 mt-2 w-48 rounded-md shadow-lg bg-moss-950 ring-1 ring-black ring-opacity-5">
                 <div class="py-1">
-                  <a href="#hero" class="block px-4 py-2 text-sm text-moss-200 hover:bg-moss-900" @click="showMainMenu = false">Hero</a>
-                  <a href="#about" class="block px-4 py-2 text-sm text-moss-200 hover:bg-moss-900" @click="showMainMenu = false">About</a>
-                  <a href="#skills" class="block px-4 py-2 text-sm text-moss-200 hover:bg-moss-900" @click="showMainMenu = false">Skills</a>
-                  <a href="#projects" class="block px-4 py-2 text-sm text-moss-200 hover:bg-moss-900" @click="showMainMenu = false">Projects</a>
-                  <a href="#contact" class="block px-4 py-2 text-sm text-moss-200 hover:bg-moss-900" @click="showMainMenu = false">Contact</a>
+                  <button @click="navigateAndScroll('about')" class="block w-full text-left px-4 py-2 text-sm text-moss-200 hover:bg-moss-900">About</button>
+                  <button @click="navigateAndScroll('skills')" class="block w-full text-left px-4 py-2 text-sm text-moss-200 hover:bg-moss-900">Skills</button>
+                  <button @click="navigateAndScroll('projects')" class="block w-full text-left px-4 py-2 text-sm text-moss-200 hover:bg-moss-900">Projects</button>
+                  <button @click="navigateAndScroll('contact')" class="block w-full text-left px-4 py-2 text-sm text-moss-200 hover:bg-moss-900">Contact</button>
                 </div>
               </div>
             </div>
@@ -93,11 +108,10 @@ if (typeof window !== 'undefined') {
         <!-- Mobile menu -->
         <DisclosurePanel class="sm:hidden">
           <div class="px-2 pt-2 pb-3 space-y-1">
-            <a href="#hero" class="block px-3 py-2 rounded-md text-base font-medium text-moss-200 hover:text-moss-100 hover:bg-moss-900">Hero</a>
-            <a href="#about" class="block px-3 py-2 rounded-md text-base font-medium text-moss-200 hover:text-moss-100 hover:bg-moss-900">About</a>
-            <a href="#skills" class="block px-3 py-2 rounded-md text-base font-medium text-moss-200 hover:text-moss-100 hover:bg-moss-900">Skills</a>
-            <a href="#projects" class="block px-3 py-2 rounded-md text-base font-medium text-moss-200 hover:text-moss-100 hover:bg-moss-900">Projects</a>
-            <a href="#contact" class="block px-3 py-2 rounded-md text-base font-medium text-moss-200 hover:text-moss-100 hover:bg-moss-900">Contact</a>
+            <button @click="navigateAndScroll('about')" class="block w-full text-left px-3 py-2 rounded-md text-base font-medium text-moss-200 hover:text-moss-100 hover:bg-moss-900">About</button>
+            <button @click="navigateAndScroll('skills')" class="block w-full text-left px-3 py-2 rounded-md text-base font-medium text-moss-200 hover:text-moss-100 hover:bg-moss-900">Skills</button>
+            <button @click="navigateAndScroll('projects')" class="block w-full text-left px-3 py-2 rounded-md text-base font-medium text-moss-200 hover:text-moss-100 hover:bg-moss-900">Projects</button>
+            <button @click="navigateAndScroll('contact')" class="block w-full text-left px-3 py-2 rounded-md text-base font-medium text-moss-200 hover:text-moss-100 hover:bg-moss-900">Contact</button>
             <router-link to="/business-questions" class="block px-3 py-2 rounded-md text-base font-medium text-moss-200 hover:text-moss-100 hover:bg-moss-900">Business Solution</router-link>
           </div>
         </DisclosurePanel>
