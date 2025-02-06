@@ -3,15 +3,18 @@
 @tailwind utilities;
 
 @layer base {
+  html {
+    @apply bg-moss-950;
+  }
   body {
-    @apply bg-gray-50 text-gray-900 dark:bg-gray-900 dark:text-gray-100;
+    @apply bg-moss-950 text-moss-200 min-h-screen;
   }
 }
 
 .section-title {
-  @apply text-3xl font-bold mb-8 text-gray-800 dark:text-gray-100;
+  @apply text-3xl font-bold mb-8 text-moss-100;
 }
 
 .card {
-  @apply bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 transition-all duration-300 hover:shadow-lg;
+  @apply bg-moss-900/50 rounded-lg shadow-md p-6 transition-all duration-300 hover:shadow-lg border border-moss-800/20;
 }
