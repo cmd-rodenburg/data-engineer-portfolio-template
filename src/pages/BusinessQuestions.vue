@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import BusinessQuestionsSection from '../components/BusinessQuestionsSection.vue'
-import BusinessNeeds from '../components/BusinessNeeds.vue'
+import SolutionsSection from '../components/Sections/Business/SolutionsSection.vue'
+import PersonalisedSection from '../components/Sections/Business/PersonalisedSection.vue'
 import NavigationBar from '../components/_NavigationBar.vue'
 </script>
 
@@ -8,8 +8,8 @@ import NavigationBar from '../components/_NavigationBar.vue'
   <div class="min-h-screen">
     <NavigationBar />
     <main class="main-content">
-      <BusinessQuestionsSection />
-      <BusinessNeeds />
+      <SolutionsSection />
+      <PersonalisedSection />
     </main>
   </div>
 </template>
