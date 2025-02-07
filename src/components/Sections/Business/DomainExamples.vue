@@ -18,19 +18,19 @@ const business_solutions: BusinessSolution[] = [
       'Marketing decisions based on intuition rather than data-driven insights.',
     ],
     solution: ['Implemented Adobe Analytics to capture user behavior across the website.',
-    'Transformed event-level data into structured insights.', 
-    'Designed visualizations to track drop-off points and optimize conversion rates.'
-    ],  
+      'Transformed event-level data into structured insights.',
+      'Designed visualizations to track drop-off points and optimize conversion rates.'
+    ],
 
     tech_implementation: ['Data Collection: Configured Adobe Analytics to track user interactions (clicks, page views, sessions).',
-    'ETL Pipeline: Extracted raw event data, cleaned, and transformed it for analysis',
-    'Data Storage: Structured data in a warehouse for efficient querying.',
-    'Analysis & Reporting: Used BI tools to visualize drop-off points and optimize conversion rates.'
+      'ETL Pipeline: Extracted raw event data, cleaned, and transformed it for analysis',
+      'Data Storage: Structured data in a warehouse for efficient querying.',
+      'Analysis & Reporting: Used BI tools to visualize drop-off points and optimize conversion rates.'
     ],
     business_impact: ['Identified top drop-off points, leading to targeted website optimizations.',
-    'Increased checkout completion rate by 27% after implementing insights.',
-    'Enabled marketing teams to make data-driven decisions, improving ROI by 32%.'
-    ] 
+      'Increased checkout completion rate by 27% after implementing insights.',
+      'Enabled marketing teams to make data-driven decisions, improving ROI by 32%.'
+    ]
   },
   {
     domain: 'The Sales Journey',
@@ -40,18 +40,18 @@ const business_solutions: BusinessSolution[] = [
       'Bottlenecks in the sales funnel causing lower conversion rates.',
     ],
     solution: ['Built a sales funnel model in HubSpot to track leads through different stages.',
-    'Applied the BANT framework to segment and prioritize high-value leads.',
-    'Developed an acquisition model to analyze bottlenecks and suggest improvements.',
+      'Applied the BANT framework to segment and prioritize high-value leads.',
+      'Developed an acquisition model to analyze bottlenecks and suggest improvements.',
     ],
     tech_implementation: ['Lead Tracking: Integrated HubSpot CRM with automated lead scoring.',
-    'Data Processing: Applied BANT framework using business rules and machine learning.',
-    'Insights Generation: Built dashboards to monitor lead conversion performance.',
-    'Optimization: Recommended sales process improvements based on data analysis.'
+      'Data Processing: Applied BANT framework using business rules and machine learning.',
+      'Insights Generation: Built dashboards to monitor lead conversion performance.',
+      'Optimization: Recommended sales process improvements based on data analysis.'
     ],
     business_impact: ['Reduced lead qualification time by 45%, improving sales team efficiency.',
-    'Increased conversion rate of high-value leads by 38%.',
-    'Streamlined sales processes, reducing customer acquisition costs by 25%.'
-    ] 
+      'Increased conversion rate of high-value leads by 38%.',
+      'Streamlined sales processes, reducing customer acquisition costs by 25%.'
+    ]
   },
 ];
 
@@ -63,28 +63,26 @@ function selectSolution(solution: BusinessSolution) {
 </script>
 
 <template>
-  <section class="section-container bg-gradient-to-br from-primary-50 to-white dark:from-gray-900 dark:to-gray-800" id="business-solutions">
+  <section class="section-container bg-gradient-to-br from-primary-50 to-white dark:from-gray-900 dark:to-gray-800"
+    id="business-solutions">
     <div class="section-content">
       <!-- Solution Selector -->
       <div class="solution-selector mb-8">
         <div class="flex flex-wrap gap-4 justify-center">
-          <button 
-  v-for="solution in business_solutions" 
-  :key="solution.domain"
-  @click="selectSolution(solution)"
-  :class="['px-6 py-3 rounded-lg transition-all text-lg font-medium', 
-    selectedSolution.domain === solution.domain 
-      ? 'bg-green-800 text-white shadow-lg'  /* Dark Green */
-      : 'bg-white hover:bg-gray-300 text-gray-700']"
->
-  {{ solution.domain }}
-</button>
+          <button v-for="solution in business_solutions" :key="solution.domain" @click="selectSolution(solution)"
+            :class="['px-6 py-3 rounded-lg transition-all text-lg font-medium',
+              selectedSolution.domain === solution.domain
+                ? 'bg-green-800 text-white shadow-lg'  /* Dark Green */
+                : 'bg-white hover:bg-gray-300 text-gray-700']">
+            {{ solution.domain }}
+          </button>
 
         </div>
       </div>
 
       <!-- Selected Solution Content -->
-      <div v-if="selectedSolution" class="solution-content bg-white rounded-lg shadow-lg p-8 border border-gray-200 text-moss-700">
+      <div v-if="selectedSolution"
+        class="solution-content bg-white rounded-lg shadow-lg p-8 border border-gray-200 text-moss-700">
         <div class="mb-8">
           <h3 class="text-2xl font-bold mb-4">Problem Statement</h3>
           <ul class="list-disc ml-6 space-y-2">
@@ -139,12 +137,14 @@ function selectSolution(solution: BusinessSolution) {
   padding-left: 1rem;
   padding-right: 1rem;
 }
+
 @media (min-width: 640px) {
   .section-content {
     padding-left: 1.5rem;
     padding-right: 1.5rem;
   }
 }
+
 @media (min-width: 1024px) {
   .section-content {
     padding-left: 2rem;
