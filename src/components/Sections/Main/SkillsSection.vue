@@ -91,25 +91,18 @@ const toolLinks: Record<string, string> = {
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <h2 class="section-title">Technical Skills</h2>
       <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-        <div
-          v-for="(skill, index) in skills"
-          :key="index"
-          :class="[
-            'card',
-            skill.category === 'API integrations'
-              ? 'md:col-span-2 lg:col-span-3'
-              : '',
-          ]"
-        >
+        <div v-for="(skill, index) in skills" :key="index" :class="[
+          'card',
+          skill.category === 'API integrations'
+            ? 'md:col-span-2 lg:col-span-3'
+            : '',
+        ]">
           <h3 class="text-xl font-semibold mb-4 text-primary-600">
             {{ skill.category }}
           </h3>
           <div class="flex flex-wrap gap-2">
-            <span
-              v-for="item in skill.items"
-              :key="item"
-              class="px-3 py-1 bg-primary-900/20 text-primary-700 rounded-full text-sm"
-            >
+            <span v-for="item in skill.items" :key="item"
+              class="px-3 py-1 bg-primary-900/20 text-primary-700 rounded-full text-sm">
               <a :href="toolLinks[item]" target="_blank" rel="noopener">{{
                 item
               }}</a>

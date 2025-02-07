@@ -31,11 +31,8 @@
         <div class="mt-8 md:mt-0">
           <div class="flex flex-col items-center">
             <div class="w-full max-w-[250px] mb-8">
-              <img
-                src="/images/AnneRodenburg.jpg"
-                alt="Profile picture"
-                class="rounded-full w-full aspect-square object-cover shadow-lg"
-              />
+              <img src="/images/AnneRodenburg.jpg" alt="Profile picture"
+                class="rounded-full w-full aspect-square object-cover shadow-lg" />
             </div>
             <div class="w-full grid grid-cols-2 gap-4">
               <div class="bg-gray-700/50 rounded-lg p-4 text-center">

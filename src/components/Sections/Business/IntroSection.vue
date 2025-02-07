@@ -1,16 +1,18 @@
 <template>
-  <section class="section-container bg-gradient-to-br from-primary-50 to-white dark:from-gray-900 dark:to-gray-800" id="business-solutions">
+  <section class="section-container bg-gradient-to-br from-primary-50 to-white dark:from-gray-900 dark:to-gray-800"
+    id="business-solutions">
     <div class="section-content">
       <!-- Section Title -->
       <h2 class="section-title text-moss-700">Business Solutions</h2>
-      
+
       <!-- Introduction text -->
       <div class="intro-text mb-8">
         <p class="text-lg text-moss-50">
-          In today's digital landscape, businesses struggle to connect marketing performance with sales outcomes. 
-          To bridge this gap, I engineered data-driven solutions leveraging Adobe Analytics and HubSpot CRM. 
-          These implementations optimized user journeys, enhanced conversion rates, and improved lead qualification. 
-          This case study outlines how data engineering transformed raw event data into actionable insights, leading to measurable business impact.
+          In today's digital landscape, businesses struggle to connect marketing performance with sales outcomes.
+          To bridge this gap, I engineered data-driven solutions leveraging Adobe Analytics and HubSpot CRM.
+          These implementations optimized user journeys, enhanced conversion rates, and improved lead qualification.
+          This case study outlines how data engineering transformed raw event data into actionable insights, leading to
+          measurable business impact.
         </p>
 
         <div class="key-takeaways mt-6 bg-white p-6 max-w-xl mx-auto rounded-lg">
