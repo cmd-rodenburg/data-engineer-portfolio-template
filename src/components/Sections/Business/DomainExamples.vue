@@ -69,16 +69,17 @@ function selectSolution(solution: BusinessSolution) {
       <div class="solution-selector mb-8">
         <div class="flex flex-wrap gap-4 justify-center">
           <button 
-            v-for="solution in business_solutions" 
-            :key="solution.domain"
-            @click="selectSolution(solution)"
-            :class="['px-6 py-3 rounded-lg transition-all text-lg font-medium', 
-                    selectedSolution === solution 
-                      ? 'bg-blue-600 text-white shadow-lg' 
-                      : 'bg-gray-200 hover:bg-gray-300 text-gray-700']"
-          >
-            {{ solution.domain }}
-          </button>
+  v-for="solution in business_solutions" 
+  :key="solution.domain"
+  @click="selectSolution(solution)"
+  :class="['px-6 py-3 rounded-lg transition-all text-lg font-medium', 
+    selectedSolution.domain === solution.domain 
+      ? 'bg-green-800 text-white shadow-lg'  /* Dark Green */
+      : 'bg-white hover:bg-gray-300 text-gray-700']"
+>
+  {{ solution.domain }}
+</button>
+
         </div>
       </div>
 
