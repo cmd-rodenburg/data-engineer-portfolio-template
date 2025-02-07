@@ -87,6 +87,15 @@ if (typeof window !== 'undefined') {
             >
               Business Solution
             </router-link>
+             
+            <!-- Test page link  -->
+             <router-link 
+              to="/test-page" 
+              class="text-moss-200 hover:text-moss-100 px-3 py-2 rounded-md text-sm font-medium"
+            >
+              Testing page
+            </router-link>
+
           </div>
 
           <!-- Mobile menu button -->
