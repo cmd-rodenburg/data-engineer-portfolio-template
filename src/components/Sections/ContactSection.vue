@@ -5,15 +5,10 @@ import ContactForm from '../forms/ContactForm.vue'
 <template>
   <!-- Contact Form-->
   <section id="contact">
-    <div id="wrapper">
-      <main id="content">
-        <ContactForm />
-      </main>
-    </div>
-  </section>
+    <main id="content">
+      <ContactForm />
+    </main>
 
-  <!-- Contact Links -->
-  <section id="contact-links">
     <div class="contact-links">
       <div class="flex justify-center space-x-4">
         <a href="https://www.linkedin.com/in/annerodenburgbi" target="_blank">
@@ -28,12 +23,10 @@ import ContactForm from '../forms/ContactForm.vue'
 </template>
 
 <style scoped>
-#contact {
-  padding-top: 5rem;
-  /* py-20 */
+.contact {
+  padding-top: 10rem;
   padding-bottom: 5rem;
-  background-color: #F9FAFB;
-  /* bg-gray-50 */
+  background-color: theme('colors.moss.800');
 }
 
 /* Dark mode styles */

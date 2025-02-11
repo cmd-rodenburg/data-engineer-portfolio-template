@@ -33,8 +33,6 @@ const submitForm = () => {
 </script>
 
 <template>
-  <h1>Feedback Form</h1>
-  <h1>Vue 3 + Netlify Forms</h1>
 
   <section v-if="formData.response" class="notification">
     <h2>{{ formData.response }}</h2>
