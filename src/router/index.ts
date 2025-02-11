@@ -1,25 +1,27 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import Home from '../Pages/Home.vue'
-import BusinessQuestions from '../Pages/BusinessQuestions.vue'
-import TestPage from '../Pages/Blank_test_page.vue'
+import type { RouteRecordRaw } from 'vue-router'
 
-const routes = [
+const routes: RouteRecordRaw[] = [
   {
     path: '/',
     name: 'Home',
-    component: Home
+    component: () => import('../Pages/Home.vue'), // Lazy load Home
+    meta: {
+      title: 'Home'
+    }
   },
   {
     path: '/business-questions',
     name: 'BusinessQuestions',
-    component: BusinessQuestions
+    component: () => import('../Pages/BusinessQuestions.vue')
   },
   {
     path: '/test-page',
     name: 'TestPage',
-    component: TestPage
+    component: () => import('../Pages/Blank_test_page.vue')
   }
 ]
+
 
 const router = createRouter({
   history: createWebHistory(),
