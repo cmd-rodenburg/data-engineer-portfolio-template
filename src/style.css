@@ -6,6 +6,7 @@
   html {
     @apply bg-moss-950;
   }
+
   body {
     @apply bg-moss-950 text-moss-200 min-h-screen;
   }

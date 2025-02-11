@@ -16,5 +16,5 @@
 </template>
 
 <script setup>
-import DecisionTree from './DecisionTree/DecisionTree.vue';
+import DecisionTree from '../../DecisionTree/DecisionTree.vue';
 </script>

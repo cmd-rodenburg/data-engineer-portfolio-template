@@ -1,6 +1,11 @@
 {
+  "singleAttributePerLine": true,
+  "vueIndentScriptAndStyle": true,
   "printWidth": 80,
   "tabWidth": 2,
   "singleQuote": true,
+  "trailingComma": "es5",
+  "bracketSameLine": false,
+  "htmlWhitespaceSensitivity": "css",
   "semi": true
 }
