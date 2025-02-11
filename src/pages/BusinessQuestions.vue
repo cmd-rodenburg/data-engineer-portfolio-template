@@ -4,7 +4,7 @@ import Header from '../components/Layout/Header.vue'
 import IntroSection from '../components/Sections/Business/IntroSection.vue'
 import DomainExamples from '../components/Sections/Business/DomainExamples.vue'
 import PersonalisedSection from '../components/Sections/Business/PersonalisedSection.vue'
-import ContactSection from './../components/ContactSection.vue';
+import ContactSection from '../components/Sections/ContactSection.vue';
 </script>
 
 <template>
