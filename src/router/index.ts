@@ -5,7 +5,7 @@ const routes: RouteRecordRaw[] = [
   {
     path: '/',
     name: 'Home',
-    component: () => import('../Pages/Home.vue'), // Lazy load Home
+    component: () => import('../pages/Home.vue'), // Lazy load Home
     meta: {
       title: 'Home'
     }
@@ -13,12 +13,12 @@ const routes: RouteRecordRaw[] = [
   {
     path: '/business-questions',
     name: 'BusinessQuestions',
-    component: () => import('../Pages/BusinessQuestions.vue')
+    component: () => import('../pages/BusinessQuestions.vue')
   },
   {
     path: '/test-page',
     name: 'TestPage',
-    component: () => import('../Pages/Blank_test_page.vue')
+    component: () => import('../pages/Blank_test_page.vue')
   }
 ]
 
