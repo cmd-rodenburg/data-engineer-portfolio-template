@@ -2,7 +2,7 @@
 const skills = [
   {
     category: 'Programming Languages',
-    items: ['Python', 'SQL', 'PySpark', 'Power M Query', 'DAX'],
+    items: ['Python', 'SQL', 'PySpark', 'Power M Query', 'DAX', 'Vue'],
   },
   {
     category: 'Cloud Platforms',
@@ -63,6 +63,7 @@ const toolLinks: Record<string, string> = {
   'Azure SQL': 'https://azure.microsoft.com/en-us/products/azure-sql/',
   Hadoop: 'https://hadoop.apache.org/',
   dbt: 'https://www.getdbt.com/',
+  Vue: 'https://vuejs.org/',
   Prefect: 'https://www.prefect.io/',
   'Azure Data Factory':
     'https://azure.microsoft.com/en-us/products/data-factory/',
