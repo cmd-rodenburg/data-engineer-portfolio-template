@@ -88,9 +88,8 @@ function selectSolution(solution: BusinessSolution) {
 </script>
 
 <template>
-  <section class="section-container bg-gradient-to-br from-primary-50 to-white dark:from-gray-900 dark:to-gray-800"
-    id="business-solutions">
-    <div class="section-content">
+  <section class="pt-20 pb-20 bg-gradient-to-br from-primary-50 to-white dark:from-gray-900 dark:to-gray-800" id="business-solutions">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <!-- Solution Selector -->
       <div class="solution-selector mb-8">
         <div class="flex flex-wrap gap-4 justify-center">
@@ -101,21 +100,17 @@ function selectSolution(solution: BusinessSolution) {
                 : 'bg-white hover:bg-gray-300 text-gray-700']">
             {{ solution.domain }}
           </button>
-
         </div>
       </div>
 
       <!-- Selected Solution Content -->
-      <div v-if="selectedSolution"
-        class="solution-content bg-white rounded-lg shadow-lg p-8 border border-gray-200 text-black">
+      <div v-if="selectedSolution" class="solution-content bg-white rounded-lg shadow-lg p-8 border border-gray-200 text-black">
         <div class="mb-8">
           <h3 class="text-2xl font-bold mb-4">Summary</h3>
           <p>{{ selectedSolution.summary }}</p>
           <img :src="selectedSolution.image" :alt="selectedSolution.domain" :title="selectedSolution.image_subtitle"
-            class="w-30 h-70 object-cover rounded-lg mb-2" />
-          <p class="text-sm text-gray-600 text-center mb-4 italic">{{ selectedSolution.image_subtitle }} visualization
-          </p>
-
+            class="w-full h-60 object-cover rounded-lg mb-4" />
+          <p class="text-sm text-gray-600 text-center mb-4 italic">{{ selectedSolution.image_subtitle }}</p>
 
           <h3 class="text-2xl font-bold mb-4">Problem Statement</h3>
           <ul class="list-disc ml-6 space-y-2">
@@ -124,7 +119,6 @@ function selectSolution(solution: BusinessSolution) {
             </li>
           </ul>
         </div>
-
 
         <div class="mb-8">
           <h3 class="text-2xl font-bold mb-4">Solution</h3>
@@ -145,7 +139,7 @@ function selectSolution(solution: BusinessSolution) {
         </div>
 
         <div class="mb-8">
-          <h3 class="text-2xl font-bold mb-4 ">Business Impact</h3>
+          <h3 class="text-2xl font-bold mb-4">Business Impact</h3>
           <ul class="list-disc ml-6 space-y-2">
             <li v-for="(item, index) in selectedSolution.business_impact" :key="index">
               {{ item }}
@@ -156,33 +150,3 @@ function selectSolution(solution: BusinessSolution) {
     </div>
   </section>
 </template>
-
-<style>
-.section-container {
-  padding-top: 5rem;
-  padding-bottom: 5rem;
-  background-color: rgb(249 250 251);
-}
-
-.section-content {
-  max-width: 80rem;
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 1rem;
-  padding-right: 1rem;
-}
-
-@media (min-width: 640px) {
-  .section-content {
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
-  }
-}
-
-@media (min-width: 1024px) {
-  .section-content {
-    padding-left: 2rem;
-    padding-right: 2rem;
-  }
-}
-</style>

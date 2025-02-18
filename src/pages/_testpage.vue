@@ -2,6 +2,7 @@
 import NavigationBar from '../components/Layout/NavigationBar.vue';
 // import DomainExamples from '../components/Sections/Business/DomainExamples.vue'
 import ContactSection from '../components/Sections/ContactSection.vue';
+import MeetMeSection from '../components/Sections/MeetMeSection.vue';
 </script>
 
 <template>
@@ -9,6 +10,7 @@ import ContactSection from '../components/Sections/ContactSection.vue';
     <NavigationBar />
     <main class="main-content">
       <ContactSection />
+      <MeetMeSection />
       <OGform />
     </main>
   </div>

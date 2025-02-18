@@ -18,9 +18,15 @@ const routes: RouteRecordRaw[] = [
   {
     path: '/test-page',
     name: 'TestPage',
-    component: () => import('../pages/Blank_test_page.vue')
+    component: () => import('../pages/_testpage.vue')
+  },
+  {
+    path: '/meet-Anne',
+    name: 'MeetAnne',
+    component: () => import('../pages/MeetAnnePage.vue')
   }
 ]
+
 
 
 const router = createRouter({

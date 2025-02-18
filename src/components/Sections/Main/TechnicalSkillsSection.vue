@@ -34,6 +34,7 @@ const skills = [
   {
     category: 'API integrations',
     items: [
+      'Linkedin',
       'Hubspot',
       'SevDesk',
       'DateV',
@@ -49,6 +50,7 @@ const skills = [
 ];
 // Map each tool to its official webpage
 const toolLinks: Record<string, string> = {
+  Linkedin: 'https://developer.linkedin.com/',
   Python: 'https://www.python.org/',
   SQL: 'https://en.wikipedia.org/wiki/SQL',
   PySpark: 'https://spark.apache.org/docs/latest/api/python/',

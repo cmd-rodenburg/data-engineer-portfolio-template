@@ -3,6 +3,7 @@ import { ref, watch } from 'vue';
 import { useWindowScroll } from '@vueuse/core';
 import { Disclosure, DisclosureButton, DisclosurePanel } from '@headlessui/vue';
 import { useRouter } from 'vue-router';
+import BaseButton from '../CommonElements/Button.vue';
 
 const router = useRouter();
 const { y } = useWindowScroll();
@@ -96,6 +97,12 @@ if (typeof window !== 'undefined') {
               Testing page
             </router-link> -->
 
+            <!-- Schedule meeting link  -->
+            <router-link to="/meet-anne">
+              <BaseButton>
+                Book a meeting
+              </BaseButton>
+            </router-link>
           </div>
 
           <!-- Mobile menu button -->

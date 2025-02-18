@@ -1,32 +1,41 @@
 <script setup lang="ts">
-import ContactForm from '../forms/ContactForm.vue'
+import ContactForm from '../forms/ContactForm.vue';
+import BaseButton from '../CommonElements/Button.vue';
 </script>
 
 <template>
-  <!-- Contact Form-->
-  <section id="contact" class="py-20 bg-gray-900">
+  <section id="contact" class="py-20 bg-gray-900 text-white">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <h2 class="section-title">Contact form</h2>
+      <!-- Section Title -->
+      <h2 class="text-3xl font-bold text-center mb-8">Contact Me</h2>
 
-      <div class="w-full max-w-xl mx-auto px-10 py-2">
+      <div class="max-w-xl mx-auto text-center space-y-6">
+        <p class="text-lg font-semibold">
+          Curious to learn more about how I can help your business grow?
+        </p>
 
-        <main class="w-full bg-white dark:bg-gray-800 rounded-lg shadow-lg p-8 mb-8">
-          <p class="text-white py-2"> Are you curious to learn more or how I could support you business to grow? Don't
-            hesistate and fill out thisform. I'll get in touch with you shortly. </p>
-          <p></p>
+        <!-- Book a Meeting Section -->
+        <div class="bg-gray-800 p-6 rounded-lg shadow-md">
+          <h3 class="text-xl font-semibold mb-2">Book a Meeting Now</h3>
+          <router-link to="/meet-anne">
+            <BaseButton class="mt-4">Book a Meeting</BaseButton>
+          </router-link>
+        </div>
 
+        <!-- Contact Form Section -->
+        <div class="bg-white text-gray-900 dark:bg-gray-800 dark:text-white p-8 rounded-lg shadow-lg">
+          <h3 class="text-xl font-semibold mb-4">Get in Touch</h3>
           <ContactForm />
-        </main>
+        </div>
 
-        <div class="mt-8">
-          <div class="flex justify-center space-x-4">
-            <a href="https://www.linkedin.com/in/annerodenburgbi" target="_blank">
-              <img src="https://img.icons8.com/color/48/000000/linkedin.png" alt="LinkedIn" />
-            </a>
-            <a href="https://medium.com/@rodenburg.bi" target="_blank">
-              <img src="https://img.icons8.com/color/48/000000/medium.png" alt="Medium" />
-            </a>
-          </div>
+        <!-- Social Links -->
+        <div class="flex justify-center space-x-6 mt-6">
+          <a href="https://www.linkedin.com/in/annerodenburgbi" target="_blank" class="hover:opacity-80 transition">
+            <img src="https://img.icons8.com/color/48/000000/linkedin.png" alt="LinkedIn" class="w-12 h-12">
+          </a>
+          <a href="https://medium.com/@rodenburg.bi" target="_blank" class="hover:opacity-80 transition">
+            <img src="https://img.icons8.com/color/48/000000/medium.png" alt="Medium" class="w-12 h-12">
+          </a>
         </div>
       </div>
     </div>
