@@ -23,7 +23,7 @@ const routes: RouteRecordRaw[] = [
   {
     path: '/meet-Anne',
     name: 'MeetAnne',
-    component: () => import('../pages/MeetAnnePage.vue')
+    component: () => import('../pages/BookMeeting.vue')
   }
 ]
 

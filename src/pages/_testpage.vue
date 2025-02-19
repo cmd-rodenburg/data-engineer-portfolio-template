@@ -1,8 +1,8 @@
 <script setup lang="ts">
 import NavigationBar from '../components/Layout/NavigationBar.vue';
 // import DomainExamples from '../components/Sections/Business/DomainExamples.vue'
-import ContactSection from '../components/Sections/ContactSection.vue';
-import MeetMeSection from '../components/Sections/MeetMeSection.vue';
+import Services from '../components/Sections/Business/ServicesSection.vue';
+
 </script>
 
 <template>
@@ -10,7 +10,7 @@ import MeetMeSection from '../components/Sections/MeetMeSection.vue';
     <NavigationBar />
     <main class="main-content">
       <ContactSection />
-      <MeetMeSection />
+      <Services />
       <OGform />
     </main>
   </div>

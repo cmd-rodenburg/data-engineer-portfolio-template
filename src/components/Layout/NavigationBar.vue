@@ -88,7 +88,7 @@ if (typeof window !== 'undefined') {
             <!-- Business Solution Link -->
             <router-link to="/business-questions"
               class="text-moss-200 hover:text-moss-100 px-3 py-2 rounded-md text-sm font-medium">
-              Business Solution
+              Business Solutions
             </router-link>
 
             <!-- Test page link  -->

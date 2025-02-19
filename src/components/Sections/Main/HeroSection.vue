@@ -12,8 +12,8 @@ const technologies = [
 
 <template>
   <section
-    class="min-h-screen flex items-center justify-center bg-gradient-to-br from-primary-50 to-white dark:from-gray-900 dark:to-gray-800">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32">
+    class="min-h-screen flex items-center justify-center bg-gradient-to-b from-primary-50 to-white dark:from-gray-900 dark:to-gray-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
       <div class="text-center">
         <h1 class="text-4xl sm:text-6xl font-bold text-gray-900 dark:text-white mb-6">
           Rodenburg
