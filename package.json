@@ -6,25 +6,22 @@
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc -b && vite build",
-    "preview": "vite preview",
-    "format": "prettier --write \"src/**/*.vue\""
+    "preview": "vite preview"
   },
   "dependencies": {
-    "@headlessui/vue": "^1.7.17",
-    "@vueuse/core": "^10.7.1",
     "vue": "^3.5.10",
-    "vue-router": "^4.5.0"
+    "vue-router": "^4.2.5",
+    "@vueuse/core": "^10.7.1",
+    "@headlessui/vue": "^1.7.17"
   },
   "devDependencies": {
-    "@types/node": "^20.11.0",
     "@vitejs/plugin-vue": "^5.1.4",
-    "autoprefixer": "^10.4.17",
-    "postcss": "^8.4.33",
-    "prettier": "^3.4.2",
-    "prettier-plugin-vue": "^1.1.6",
-    "tailwindcss": "^3.4.1",
     "typescript": "^5.5.3",
     "vite": "^5.4.8",
-    "vue-tsc": "^2.1.6"
+    "vue-tsc": "^2.1.6",
+    "autoprefixer": "^10.4.17",
+    "tailwindcss": "^3.4.1",
+    "postcss": "^8.4.33",
+    "@types/node": "^20.11.0"
   }
 }
