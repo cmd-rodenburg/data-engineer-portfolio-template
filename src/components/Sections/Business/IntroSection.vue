@@ -11,7 +11,7 @@
             solutions that don’t just collect information—they connect the dots between marketing efforts and real revenue
             impact. By transforming raw event data into actionable insights, I’ve helped businesses optimize user
             journeys, sharpen lead qualification, and make smarter decisions. These case studies are a glimpse into how
-            data engineering can bridge the gap between marketing and sales, turning insights into measurable growth.
+            data engineering can bridge the gap between tech and business, turning insights into measurable growth.
           </p>
         </div>
       </div>

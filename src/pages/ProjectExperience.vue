@@ -5,6 +5,7 @@ import IntroSection from '../components/Sections/Business/IntroSection.vue'
 import FeaturedProjects from '../components/Sections/Business/ProjectsSection.vue'
 import Services from '../components/Sections/Business/ServicesSection.vue'
 import ContactSection from '../components/Sections/ContactSection.vue';
+import Blog from '../components/Sections/Main/BlogSection.vue';
 </script>
 
 <template>
@@ -15,6 +16,7 @@ import ContactSection from '../components/Sections/ContactSection.vue';
       <IntroSection />
       <FeaturedProjects />
       <Services />
+      <Blog/>
       <ContactSection />
     </main>
   </div>
