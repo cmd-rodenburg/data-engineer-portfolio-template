@@ -43,7 +43,7 @@
                 </div>
                 <div class="bg-gray-700/50 rounded-lg p-4 text-center">
                   <h3 class="text-xl font-semibold mb-1">6</h3>
-                  <p class="text-gray-400 text-sm">Projects</p>
+                  <router-link to="/project-experience" class="text-gray-400 text-sm">Projects </router-link>
                 </div>
                 <div class="bg-gray-700/50 rounded-lg p-4 text-center">
                   <h3 class="text-xl font-semibold mb-1">10+</h3>

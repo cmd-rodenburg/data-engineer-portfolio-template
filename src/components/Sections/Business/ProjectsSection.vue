@@ -44,7 +44,7 @@ const projects = [
 </script>
 
 <template>
-  <section id="projects" class="bg-gray-800 py-10">
+  <section id="projects" class="pt-20 pb-20 bg-gradient-to-br from-primary-50 to-white dark:from-gray-900 dark:to-gray-800 py-10">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <h2 class="section-title">Featured Projects</h2>
       <div class="grid md:grid-cols-2 lg:grid-cols-2 gap-8">

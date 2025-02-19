@@ -1,6 +1,6 @@
 <template>
-  <header class="header">
-    <img :src="imageSrc" alt="Header Image" class="header-image" />
+  <header class="header" style="position: relative; width: 100%; height: 150px; overflow: hidden;">
+    <img :src="imageSrc" alt="Header Image" class="header-image" style="width: 100%; height: 100%; object-fit: cover; opacity: 0.3;" />
   </header>
 </template>
 
@@ -12,21 +12,3 @@ defineProps({
   },
 });
 </script>
-
-<style scoped>
-.header {
-  position: relative;
-  width: 100%;
-  height: 100px;
-  /* Adjust height as needed */
-  overflow: hidden;
-}
-
-.header-image {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  opacity: 0.3;
-  /* Slight transparency */
-}
-</style>

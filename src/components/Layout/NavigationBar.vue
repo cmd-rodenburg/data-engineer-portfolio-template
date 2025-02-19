@@ -77,8 +77,8 @@ if (typeof window !== 'undefined') {
                     class="block w-full text-left px-4 py-2 text-sm text-moss-200 hover:bg-moss-900">About</button>
                   <button @click="navigateAndScroll('skills')"
                     class="block w-full text-left px-4 py-2 text-sm text-moss-200 hover:bg-moss-900">Skills</button>
-                  <button @click="navigateAndScroll('projects')"
-                    class="block w-full text-left px-4 py-2 text-sm text-moss-200 hover:bg-moss-900">Projects</button>
+                  <!-- <button @click="navigateAndScroll('projects')"
+                    class="block w-full text-left px-4 py-2 text-sm text-moss-200 hover:bg-moss-900">Projects</button> -->
                   <button @click="navigateAndScroll('contact')"
                     class="block w-full text-left px-4 py-2 text-sm text-moss-200 hover:bg-moss-900">Contact</button>
                 </div>
@@ -86,9 +86,9 @@ if (typeof window !== 'undefined') {
             </div>
 
             <!-- Business Solution Link -->
-            <router-link to="/business-questions"
+            <router-link to="/project-experience"
               class="text-moss-200 hover:text-moss-100 px-3 py-2 rounded-md text-sm font-medium">
-              Business Solutions
+              Project experience
             </router-link>
 
             <!-- Test page link  -->
@@ -131,13 +131,12 @@ if (typeof window !== 'undefined') {
               class="block w-full text-left px-3 py-2 rounded-md text-base font-medium text-moss-200 hover:text-moss-100 hover:bg-moss-900">About</button>
             <button @click="navigateAndScroll('skills')"
               class="block w-full text-left px-3 py-2 rounded-md text-base font-medium text-moss-200 hover:text-moss-100 hover:bg-moss-900">Skills</button>
-            <button @click="navigateAndScroll('projects')"
-              class="block w-full text-left px-3 py-2 rounded-md text-base font-medium text-moss-200 hover:text-moss-100 hover:bg-moss-900">Projects</button>
+            <!-- <button @click="navigateAndScroll('projects')"
+              class="block w-full text-left px-3 py-2 rounded-md text-base font-medium text-moss-200 hover:text-moss-100 hover:bg-moss-900">Projects</button> -->
             <button @click="navigateAndScroll('contact')"
               class="block w-full text-left px-3 py-2 rounded-md text-base font-medium text-moss-200 hover:text-moss-100 hover:bg-moss-900">Contact</button>
-            <router-link to="/business-questions"
-              class="block px-3 py-2 rounded-md text-base font-medium text-moss-200 hover:text-moss-100 hover:bg-moss-900">Business
-              Solution</router-link>
+            <router-link to="/project-experience"
+              class="block px-3 py-2 rounded-md text-base font-medium text-moss-200 hover:text-moss-100 hover:bg-moss-900">Project experience</router-link>
           </div>
         </DisclosurePanel>
       </Disclosure>

@@ -53,7 +53,7 @@ const projects = [
 <template>
   <section id="projects" class="bg-gray-800 py-24">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <h2 class="section-title">Featured services</h2>
+      <h2 class="section-title">Services</h2>
       <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
         <div v-for="(project, index) in projects" :key="index" class="card p-8">
             
